@@ -1,0 +1,177 @@
+#!/bin/bash
+
+#Creador: @🇲🇽🦋⃟⋆⃟ۣۜ𝕀✞ｴ𝚟à𝘯™_ᵛⁱᵖ
+
+# Regular Color
+
+Black='\033[0;30m'   # Negro
+Red='\033[0;31m'     # Rojo
+Green='\033[0;32m'   # Verde
+Yellow='\033[0;33m'  # Amarillo
+Blue='\033[0;34m'    # Azul
+Purple='\033[0;35m'  # Purpura
+Cyan='\033[0;36m'    # Cian
+White='\033[0;97m'   # Blanco
+Blink='\033[5m'      # Parpadeo
+Color_Off='\033[0m'  # Restablecer Texto
+
+# Colores Adicionales
+
+LGray='\033[0;90m'   # Gris Claro
+LRed='\033[0;91m'    # Rojo Claro
+LGreen='\033[0;92m'  # Verde Claro
+LYellow='\033[0;93m' # Amarillo Claro
+LBlue='\033[0;94m'   # Azul Claro
+LPurple='\033[0;95m' # Púrpura Claro
+LCyan='\033[0;96m'   # Cian Claro
+
+# Letra Negrita
+
+BBlack='\033[1;30m'  # Negro
+BGray='\033[1;37m'   # Gris
+BRed='\033[1;31m'    # Rojo
+BGreen='\033[1;32m'  # Verde
+BYellow='\033[1;33m' # Amarillo
+BBlue='\033[1;34m'   # Azul
+BPurple='\033[1;35m' # Púrpura
+BCyan='\033[1;36m'   # cian
+BWhite='\033[1;37m'  # Blanco
+
+# Letra Cursiva
+IBlack='\033[3;30m'  # Negro
+IGray='\033[3;90m'   # Gris
+IRed='\033[3;31m'    # Rojo
+IGreen='\033[3;32m'  # vVrde
+IYellow='\033[3;33m' # Amarillo
+IBlue='\033[3;34m'   # Azul
+IPurple='\033[3;35m' # Púrpura 
+ICyan='\033[3;36m'   # Cian
+IWhite='\033[3;37m'  # Blanco
+
+# Letra Subrayar 
+UBlack='\033[4;30m'  # Negro
+UGray='\033[4;37m'   # Gris
+URed='\033[4;31m'    # Rojo
+UGreen='\033[4;32m'  # Verde
+UYellow='\033[4;33m' # Amarillo
+UBlue='\033[4;34m'   # Azul
+UPurple='\033[4;35m' # Púrpura 
+UCyan='\033[4;36m'   # Cian
+UWhite='\033[4;37m'  # Blanco
+
+# Fondo
+
+On_Black='\033[40m'  # Negro
+On_Red='\033[41m'    # Rojo
+On_Green='\033[42m'  # Verde
+On_Yellow='\033[43m' # Amarillo
+On_Blue='\033[44m'   # Azul
+On_Purple='\033[45m' # Púrpura 
+On_Cyan='\033[46m'   # Cian
+On_White='\033[47m'  # Blanco
+
+trap ctrl_c INT
+
+function ctrl_c(){
+    echo -e "\n\n${Cyan}[${BYellow}!${Cyan}] ${BRed}Saliendo De La Aplicación...IvanM_SDP${Color_Off}"
+    tput cnorm
+    exit 1
+}
+
+### Banner
+function banner(){
+echo -e "${BGreen}"
+sleep 0.15 && echo -e "\t██████████████████████████████████████████████"
+sleep 0.15 && echo -e "\t▓   ▓           ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓"
+sleep 0.15 && echo -e "\t▓   ▓   ▓▓▓   ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓"
+sleep 0.15 && echo -e "\t▓   ▓   ▓▓▓   ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓"
+sleep 0.15 && echo -e "\t▓   ▓        ▓▓▓▓▓╔══╗─────────────╔═╦═╗                 "
+sleep 0.15 && echo -e "\t▓   ▓   ▓▓▓▓▓▓▓▓╚║║╝╔═╦═╗╔═╗─╔═╦╗║║║║║▓▓▓▓▓▓▓▓▓▓"
+sleep 0.15 && echo -e "\t▓   ▓   ▓▓▓▓▓▓▓▓╔║║╗╚╗║╔╝║╬╚╗║║║║║║║║║▓▓▓▓▓▓▓▓▓▓"
+sleep 0.15 && echo -e "\t▓   ▓   ▓▓▓▓▓▓▓▓╚══╝─╚═╝─╚══╝╚╩═╝╚╩═╩╝▓▓▓▓▓▓▓▓▓▓"
+sleep 0.15 && echo -e "\t█   █   ████████──────────────────────██████████"
+sleep 0.15 && echo -e "\t██████████████████████████████████████████████"
+echo -e "${Off_Color}"
+sleep 0.15 && echo -e "\t\t    ${Green}---[ Github: https://github.com/m4lal0/ipTracker.git ]--- ${Color_Off}"
+sleep 0.15 && echo -e "\t\t\t\t    ${Green} +--==[ By ${BBlue}@m4lal0${Green} ]==-- +${Color_Off}\n\n"
+tput civis
+}
+
+function helpPanel(){
+clear; banner
+echo -e "\t${BGray}Herramienta para rastrear una IP pública, puede ser su IP o alguna otra IP.${Color_Off}"
+echo -e "\n\t${BGray}USO:${Color_Off}"
+echo -e "\t\t${BPurple}Rastrear su propia IP: \t${BGreen}./ipTracker.sh${Color_Off}"
+echo -e "\t\t${BPurple}Rastrear otra IP: \t${BGreen}./ipTracker.sh -i <ip-address>${Color_Off}"
+echo -e "\n\t${BGray}OPCIONES:${Color_Off}"
+echo -e "\n\t\t ${Cyan}[${BRed}-i <ip-address>${Cyan}] ${BPurple}\tRastrear otra dirección IP.${Color_Off}"
+echo -e "\t\t ${Cyan}[${BRed}-h${Cyan}] ${BPurple}\t\t\tMostrar este panel de ayuda.${Color_Off}\n"
+tput cnorm
+exit 0
+}
+
+function tracker(){
+    clear; banner
+    curl -s "http://ip-api.com/json/$HOST_IP" --user-agent "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.63 Safari/537.31" > iptracker.log 2>/dev/null
+    STATUS=$(cat iptracker.log | grep -Po '(?<="status":)[^},]*' | tr -d '"')
+    if [[ $STATUS == "success" ]]; then
+        IP=$(cat iptracker.log | grep -Po '(?<="query":)[^},]*' | tr -d '"')
+        COUNTRY=$(cat iptracker.log | grep -Po '(?<="country":)[^},]*' | tr -d '"')
+        CITY=$(cat iptracker.log | grep -Po '(?<="city":)[^},]*' | tr -d '"')
+        REGION=$(cat iptracker.log | grep -Po '(?<="regionName":)[^},]*' | tr -d '"')
+        LAT=$(cat iptracker.log | grep -Po '(?<="lat":)[^},]*' | tr -d '"')
+        LON=$(cat iptracker.log | grep -Po '(?<="lon":)[^},]*' | tr -d '"')
+        ISP=$(cat iptracker.log | grep -Po '(?<="isp":)[^},]*' | tr -d '"')
+        echo -e "${BGray}\tIP: ${On_Green}${BGreen}$IP${Color_Off}"
+        echo -e "${BGray}\tPais: ${BGreen}$COUNTRY${Color_Off}"
+        echo -e "${BGray}\tCiudad: ${BGreen}$CITY${Color_Off}"
+        echo -e "${BGray}\tRegion: ${BGreen}$REGION${Color_Off}"
+        echo -e "${BGray}\tLatitud: ${BGreen}$LAT${Color_Off}"
+        echo -e "${BGray}\tLongitud: ${BGreen}$LON${Color_Off}"
+        echo -e "${BGray}\tISP: ${BGreen}$ISP${Color_Off}\n"
+        rm -rf iptracker.log; tput cnorm
+        exit 0
+    else
+        echo -e "\t\n${Cyan}[${BRed}✘${Cyan}] ${BRed}Error - No hay información de la IP${Color_Off}\n"
+        rm -rf iptracker.log; tput cnorm
+        exit 1
+    fi
+}
+
+function main(){
+    clear; banner
+    curl -s "http://ip-api.com/json/" --user-agent "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.63 Safari/537.31" > iptracker.log 2>/dev/null
+    STATUS=$(cat iptracker.log | grep -Po '(?<="status":)[^},]*' | tr -d '"')
+    if [[ $STATUS == "success" ]]; then
+        IP=$(cat iptracker.log | grep -Po '(?<="query":)[^},]*' | tr -d '"')
+        COUNTRY=$(cat iptracker.log | grep -Po '(?<="country":)[^},]*' | tr -d '"')
+        CITY=$(cat iptracker.log | grep -Po '(?<="city":)[^},]*' | tr -d '"')
+        REGION=$(cat iptracker.log | grep -Po '(?<="regionName":)[^},]*' | tr -d '"')
+        LAT=$(cat iptracker.log | grep -Po '(?<="lat":)[^},]*' | tr -d '"')
+        LON=$(cat iptracker.log | grep -Po '(?<="lon":)[^},]*' | tr -d '"')
+        ISP=$(cat iptracker.log | grep -Po '(?<="isp":)[^},]*' | tr -d '"')
+        echo -e "${BGray}\tIP: ${On_Green}${BGreen}$IP${Color_Off}"
+        echo -e "${BGray}\tPais: ${BGreen}$COUNTRY${Color_Off}"
+        echo -e "${BGray}\tCiudad: ${BGreen}$CITY${Color_Off}"
+        echo -e "${BGray}\tRegion: ${BGreen}$REGION${Color_Off}"
+        echo -e "${BGray}\tLatitud: ${BGreen}$LAT${Color_Off}"
+        echo -e "${BGray}\tLongitud: ${BGreen}$LON${Color_Off}"
+        echo -e "${BGray}\tISP: ${BGreen}$ISP${Color_Off}\n"
+        rm -rf iptracker.log; tput cnorm
+        exit 0
+    else
+        echo -e "\t\n${Cyan}[${BRed}✘${Cyan}] ${BRed}Error - No hay información de la IP${Color_Off}\n"
+        rm -rf iptracker.log; tput cnorm
+        exit 1
+    fi
+}
+
+while getopts ":i:h" arg; do
+    case $arg in
+        i) HOST_IP=$OPTARG; tracker;;
+        h) helpPanel;;
+        *) helpPanel;;
+    esac
+done
+
+main
