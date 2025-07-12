@@ -160,7 +160,7 @@ echo -e "${BGray}\tRED: ${BGreen}$RED${Color_Off}\n"
 rm -rf iptracker.log; tput cnorm
 exit 0
 else
-echo -e "\t\n${Cyan}[${BRed}✘${Cyan}] ${BRed}Error - No hay información de la IP${Color_Off}\n"
+echo -e "\t\n${Cyan}[${BRed}✘${Cyan}] ${BRed}Error - No Hay Información De La IP...IvanM_SDP${Color_Off}\n"
 rm -rf iptracker.log; tput cnorm
 exit 1
 fi
