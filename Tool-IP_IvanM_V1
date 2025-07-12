@@ -82,14 +82,14 @@ exit 1
 function banner(){
 echo -e "${BGreen}"
 sleep 0.15 && echo -e "\t██████████████████████████████████████████████"
-sleep 0.15 && echo -e "\t▓   ▓        ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓"
-sleep 0.15 && echo -e "\t▓   ▓   ▓▓▓   ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓"
-sleep 0.15 && echo -e "\t▓   ▓   ▓▓▓   ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓"
-sleep 0.15 && echo -e "\t▓   ▓        ▓▓▓╔══╗─────────────╔═╦═╗                 "
-sleep 0.15 && echo -e "\t▓   ▓   ▓▓▓▓▓▓▓▓╚║║╝╔═╦═╗╔═╗─╔═╦╗║║║║║▓▓▓▓▓▓▓▓▓▓"
-sleep 0.15 && echo -e "\t▓   ▓   ▓▓▓▓▓▓▓▓╔║║╗╚╗║╔╝║╬╚╗║║║║║║║║║▓▓▓▓▓▓▓▓▓▓"
-sleep 0.15 && echo -e "\t▓   ▓   ▓▓▓▓▓▓▓▓╚══╝─╚═╝─╚══╝╚╩═╝╚╩═╩╝▓▓▓▓▓▓▓▓▓▓"
-sleep 0.15 && echo -e "\t█   █   ████████──────────────────────██████████"
+sleep 0.15 && echo -e "\t▓   ▓        ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓"
+sleep 0.15 && echo -e "\t▓   ▓   ▓▓▓   ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓"
+sleep 0.15 && echo -e "\t▓   ▓   ▓▓▓   ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓"
+sleep 0.15 && echo -e "\t▓   ▓        ▓▓▓╔══╗─────────────╔═╦═╗        "
+sleep 0.15 && echo -e "\t▓   ▓   ▓▓▓▓▓▓▓▓╚║║╝╔═╦═╗╔═╗─╔═╦╗║║║║║▓▓▓▓▓▓▓▓"
+sleep 0.15 && echo -e "\t▓   ▓   ▓▓▓▓▓▓▓▓╔║║╗╚╗║╔╝║╬╚╗║║║║║║║║║▓▓▓▓▓▓▓▓"
+sleep 0.15 && echo -e "\t▓   ▓   ▓▓▓▓▓▓▓▓╚══╝─╚═╝─╚══╝╚╩═╝╚╩═╩╝▓▓▓▓▓▓▓▓"
+sleep 0.15 && echo -e "\t█   █   ████████──────────────────────████████"
 sleep 0.15 && echo -e "\t██████████████████████████████████████████████"
 echo -e "${Off_Color}"
 sleep 0.15 && echo -e "\t\t    ${Green}---[ Github: https://github.com/Ivanmsdp/IP-Localizar-V1-IvanM_YT.git ]--- ${Color_Off}"
@@ -116,12 +116,12 @@ curl -s "http://ip-api.com/json/$HOST_IP" --user-agent "Mozilla/5.0 (X11; Linux 
 STATUS=$(cat iptracker.log | grep -Po '(?<="status":)[^},]*' | tr -d '"')
 if [[ $STATUS == "success" ]]; then
 IP=$(cat iptracker.log | grep -Po '(?<="query":)[^},]*' | tr -d '"')
-PAIS=$(cat iptracker.log | grep -Po '(?<="PAIS":)[^},]*' | tr -d '"')
-CIUDAD=$(cat iptracker.log | grep -Po '(?<="CIUDAD":)[^},]*' | tr -d '"')
-REGION=$(cat iptracker.log | grep -Po '(?<="REGION":)[^},]*' | tr -d '"')
-LATITUD=$(cat iptracker.log | grep -Po '(?<="LATITUD":)[^},]*' | tr -d '"')
-LONGITUD=$(cat iptracker.log | grep -Po '(?<="LONGITUD":)[^},]*' | tr -d '"')
-RED=$(cat iptracker.log | grep -Po '(?<="RED":)[^},]*' | tr -d '"')
+PAIS=$(cat iptracker.log | grep -Po '(?<="country":)[^},]*' | tr -d '"')
+CIUDAD=$(cat iptracker.log | grep -Po '(?<="city":)[^},]*' | tr -d '"')
+REGION=$(cat iptracker.log | grep -Po '(?<="regionName":)[^},]*' | tr -d '"')
+LATITUD=$(cat iptracker.log | grep -Po '(?<="lag":)[^},]*' | tr -d '"')
+LONGITUD=$(cat iptracker.log | grep -Po '(?<="lon":)[^},]*' | tr -d '"')
+RED=$(cat iptracker.log | grep -Po '(?<="isp":)[^},]*' | tr -d '"')
 echo -e "${BGray}\tIP: ${On_Green}${BGreen}$IP${Color_Off}"
 echo -e "${BGray}\tPAIS: ${BGreen}$PAIS${Color_Off}"
 echo -e "${BGray}\tCIUDAD: ${BGreen}$CIUDAD${Color_Off}"
@@ -144,12 +144,12 @@ curl -s "http://ip-api.com/json/" --user-agent "Mozilla/5.0 (X11; Linux x86_64) 
 STATUS=$(cat iptracker.log | grep -Po '(?<="status":)[^},]*' | tr -d '"')
 if [[ $STATUS == "success" ]]; then
 IP=$(cat iptracker.log | grep -Po '(?<="query":)[^},]*' | tr -d '"')
-PAIS=$(cat iptracker.log | grep -Po '(?<="PAIS":)[^},]*' | tr -d '"')
-CIUDAD=$(cat iptracker.log | grep -Po '(?<="CIUDAD":)[^},]*' | tr -d '"')
-REGION=$(cat iptracker.log | grep -Po '(?<="REGION":)[^},]*' | tr -d '"')
-LATITUD=$(cat iptracker.log | grep -Po '(?<="LATITUD":)[^},]*' | tr -d '"')
-LONGITUD=$(cat iptracker.log | grep -Po '(?<="LONGITUD":)[^},]*' | tr -d '"')
-RED=$(cat iptracker.log | grep -Po '(?<="RED":)[^},]*' | tr -d '"')
+PAIS=$(cat iptracker.log | grep -Po '(?<="country":)[^},]*' | tr -d '"')
+CIUDAD=$(cat iptracker.log | grep -Po '(?<="city":)[^},]*' | tr -d '"')
+REGION=$(cat iptracker.log | grep -Po '(?<="regionName":)[^},]*' | tr -d '"')
+LATITUD=$(cat iptracker.log | grep -Po '(?<="lat":)[^},]*' | tr -d '"')
+LONGITUD=$(cat iptracker.log | grep -Po '(?<="lon":)[^},]*' | tr -d '"')
+RED=$(cat iptracker.log | grep -Po '(?<="isp":)[^},]*' | tr -d '"')
 echo -e "${BGray}\tIP: ${On_Green}${BGreen}$IP${Color_Off}"
 echo -e "${BGray}\tPAIS: ${BGreen}$PAIS${Color_Off}"
 echo -e "${BGray}\tCIUDAD: ${BGreen}$CIUDAD${Color_Off}"
